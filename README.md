@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/supervik/binance-trading-performance/blob/master/Binance_trading.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1dwIXHirrgodGLoR5pcNJXvXxiyfKVu5W?usp=sharing)
 
 # Binance trading performance
 Trading profit/loss calculation on Binance spot market
