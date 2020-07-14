@@ -47,8 +47,8 @@ df = df.astype({'price': 'float', qty_base: 'float', qty_quote: 'float', 'fee': 
 # Start from time
 time_format = '%Y-%m-%d'
 start_date_ms = int(calendar.timegm(time.strptime(start_date, time_format)) * 1000)
-end_date_ms = int((calendar.timegm(time.strptime(end_date, time_format))) * 1000)
-df = df[(df.time >= start_date_ms) & (df.time <= end_date_ms + 86_400_000)]
+end_date_ms = int((calendar.timegm(time.strptime(end_date, time_format)) + 86400) * 1000)
+df = df[(df.time >= start_date_ms) & (df.time <= end_date_ms)]
 df.time = pd.to_datetime(df.time, unit='ms')
 
 # Find time for getting market prices
@@ -81,7 +81,7 @@ else:
         print(f"Something wrong with the request of BNB{asset_quote} price. Please try again.")
 
 # Summary
-days = int((prices_time - start_date_ms)/(1000 * 86400)) + 1
+days = int((prices_time - start_date_ms)/(1000 * 86400))
 average_buy = df[df.side == 1][qty_quote].sum()/df[df.side == 1][qty_base].sum()
 average_sell = df[df.side == -1][qty_quote].sum()/df[df.side == -1][qty_base].sum()
 total_volume = df[qty_quote].sum()
