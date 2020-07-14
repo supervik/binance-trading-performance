@@ -7,7 +7,7 @@ API_secret = 'PRgpBJLfzWgnuyZ9OjfA2ODJk8v0YLyhyANXgtzYeud4b6dBGjMzM7EQDK4b5g0o'
 market = 'MFT-ETH' 
  
 # Start and end date (UTC). Note, that end_date is used for getting final prices. P&L greatly depends on this date!
-start_date = "2020-06-01" 
+start_date = '2020-06-01' 
 end_date = '2020-06-30' 
 
 ## Calculations
@@ -21,8 +21,8 @@ InteractiveShell.ast_node_interactivity = "all"
 pd.set_option('display.max_rows', None)
 
 try:
-    asset_base = market.split("-")[0]
-    asset_quote = market.split("-")[1]
+    asset_base = market.split('-')[0]
+    asset_quote = market.split('-')[1]
 except IndexError:
     raise Exception(f"!!! Warning: Use dash '-' to split base and quote assets for {market}!")
 
