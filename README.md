@@ -3,7 +3,7 @@
 # Binance trading performance
 Trading profit/loss calculation on Binance spot market via API.<br>
 
-Better to open in Google Colab notebook (link above) - it allows to calculate performance without the need to install any software.
+Open in Google Colab notebook (link above) - it allows to calculate performance without the need to install any software.
 Alternatively download .ipynb file and open it in Jupyter Notebook or download binance_api.py and binance_trading_performance.py files and run them in your favotite python IDE.
 
 How to use in Google Colab:
